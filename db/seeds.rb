@@ -4,7 +4,7 @@ MenuItem.destroy_all
 
 #users
 # sunjet = User.create(username: "SunJet", password: "123", email: "sunjet@sunjet.com")
-20.times do
+30.times do
     User.create(
         username: Faker::Internet.username,
         password: "123",
@@ -14,14 +14,14 @@ MenuItem.destroy_all
         phone: Faker::PhoneNumber.phone_number
     )
 
-
+end
 #categories
 # mcd = Restaurant.create(name: "McDonalds", user_id: sunjet.id)
 # bk = Restaurant.create(name: "Burger King", user_id: sunjet.id)
 # w = Restaurant.create(name: "Wendy's", user_id: sunjet.id)
 # pops = Restaurant.create(name: "Popeye's", user_id: sunjet.id)
 
-5.times do
+10.times do
     Restaurant.create(
         name: Faker::Restaurant.name,
         rating: Faker::Restaurant.description,
@@ -44,20 +44,20 @@ Restaurant.all.each do |rest|
 
 end
 
-2.times do
+18.times do
     Cart.create(
         note: "test",
         checkout: false,
-        user_id: User.all.sample
+        user: User.all.sample
     )
+end
 
-User.all.each do
-    
-
-Restaurant.all.each do
-    CartItem.create(
-        cart: Cart.all.sample,
-        menuitem: MenuItem.all.sample
-    )
+Cart.all.each do |cart|
+    rest = Restaurant.all.sample
+    items = rand(1..10)
+        items.times do
+            CartItem.create(cart: cart, menu_item: rest.menu_items.sample)
+        end
+end
 
 

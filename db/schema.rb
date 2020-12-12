@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2020_12_11_144638) do
 
   create_table "carts", force: :cascade do |t|
     t.string "note"
-    t.float "totalcost"
     t.boolean "checkout"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -35,7 +34,6 @@ ActiveRecord::Schema.define(version: 2020_12_11_144638) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.boolean "favorite"
     t.bigint "user_id", null: false
     t.bigint "restaurant_id", null: false
     t.datetime "created_at", precision: 6, null: false
