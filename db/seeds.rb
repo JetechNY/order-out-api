@@ -4,7 +4,7 @@ MenuItem.destroy_all
 
 #users
 # sunjet = User.create(username: "SunJet", password: "123", email: "sunjet@sunjet.com")
-30.times do
+5.times do
     User.create(
         username: Faker::Internet.username,
         password: "123",
@@ -32,7 +32,7 @@ end
 
 Restaurant.all.each do |rest|
 
-    20.times do
+    5.times do
         MenuItem.create(
             name: Faker::Food.dish,
             description:Faker::Food.description,
@@ -44,7 +44,7 @@ Restaurant.all.each do |rest|
 
 end
 
-18.times do
+10.times do
     Cart.create(
         note: "test",
         checkout: false,
