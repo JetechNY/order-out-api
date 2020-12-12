@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_12_11_144638) do
   enable_extension "plpgsql"
 
   create_table "cart_items", force: :cascade do |t|
-    t.integer "quantity"
     t.bigint "cart_id", null: false
     t.bigint "menu_item_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -1,5 +1,5 @@
 class FavoriteSerializer < ActiveModel::Serializer
-  attributes :id, :favorite
-  has_one :user
-  has_one :restaurant
+  attributes :id, :user_id, :restaurant_id
+  # has_one :user
+  # has_one :restaurant
 end

@@ -1,5 +1,4 @@
 class Api::V1::RestaurantsController < ApplicationController
-    # skip_before_action :authorized, only: [:create]
 
     def show
         restaurant = Restaurant.find(params[:id])

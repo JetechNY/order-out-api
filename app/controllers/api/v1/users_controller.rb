@@ -3,12 +3,12 @@ class Api::V1::UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])
-        render json: { user: UserSerializer.new(current_user) }, status: :accepted
+        render json: user, status: :accepted
     end
 
     def index
         users = User.all
-        render json: users, except: [:created_at, :updated_at]
+        render json: users
     end
 
     def create
