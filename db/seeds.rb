@@ -13,20 +13,17 @@ MenuItem.destroy_all
         name: Faker::Name.name,
         phone: Faker::PhoneNumber.phone_number
     )
-
 end
-#categories
-# mcd = Restaurant.create(name: "McDonalds", user_id: sunjet.id)
-# bk = Restaurant.create(name: "Burger King", user_id: sunjet.id)
-# w = Restaurant.create(name: "Wendy's", user_id: sunjet.id)
-# pops = Restaurant.create(name: "Popeye's", user_id: sunjet.id)
 
 10.times do
     Restaurant.create(
         name: Faker::Restaurant.name,
         rating: Faker::Restaurant.description,
         categories: Faker::Restaurant.type,
-        image_url:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eatthis.com%2Fbiggest-myths-about-mcdonalds-foods%2F&psig=AOvVaw1xSWkKxNcXkqjxqN5l26og&ust=1607789740800000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjpt9Wpxu0CFQAAAAAdAAAAABAD"
+        image_url:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eatthis.com%2Fbiggest-myths-about-mcdonalds-foods%2F&psig=AOvVaw1xSWkKxNcXkqjxqN5l26og&ust=1607789740800000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjpt9Wpxu0CFQAAAAAdAAAAABAD",
+        display_phone: Faker::PhoneNumber.phone_number,
+        location: Faker::Address.street_address,
+        price: rand(1..100)
     )
 end
 
