@@ -18,12 +18,13 @@ end
 10.times do
     Restaurant.create(
         name: Faker::Restaurant.name,
-        rating: Faker::Restaurant.description,
+        rating: rand(1..100),
         categories: Faker::Restaurant.type,
-        image_url:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eatthis.com%2Fbiggest-myths-about-mcdonalds-foods%2F&psig=AOvVaw1xSWkKxNcXkqjxqN5l26og&ust=1607789740800000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjpt9Wpxu0CFQAAAAAdAAAAABAD",
+        image_url:"https://i1.wp.com/www.eatthis.com/wp-content/uploads/2018/12/the-golden-mcdonalds-arch.jpg?resize=640%2C360&ssl=1",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: rand(1..100)
+        price: rand(1..100),
+        description: Faker::Restaurant.description
     )
 end
 
@@ -32,8 +33,8 @@ Restaurant.all.each do |rest|
     5.times do
         MenuItem.create(
             name: Faker::Food.dish,
-            description:Faker::Food.description,
-            img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.newfoodmagazine.com%2Farticle%2F94705%2Fmcdonalds-joins-the-plant-revolution%2F&psig=AOvVaw0i2Usf4BtkaCah9FryZFl2&ust=1607789321517000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIiT742oxu0CFQAAAAAdAAAAABAD",
+            description: Faker::Food.description,
+            img:"https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg",
             price: rand(1..100),
             restaurant: rest
         )
