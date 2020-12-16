@@ -1,6 +1,6 @@
 class Api::V1::CartItemsController < ApplicationController
 
-    skip_before_action :authorized, only: [:create, :destroy]
+    # skip_before_action :authorized, only: [:create, :destroy]
 
     def create
         cart_item = Cart_item.create(cart_item_params)

@@ -7,7 +7,8 @@ class Api::V1::CartsController < ApplicationController
 
     def index
         carts = Cart.all
-        render json: carts, except: [:created_at, :updated_at]
+        render json: carts
+        # , except: [:created_at, :updated_at]
     end
 
     def create
