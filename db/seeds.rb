@@ -23,19 +23,19 @@ MenuItem.destroy_all
         image_url:"https://i1.wp.com/www.eatthis.com/wp-content/uploads/2018/12/the-golden-mcdonalds-arch.jpg?resize=640%2C360&ssl=1",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: rand(1..100),
+        price: Faker::Number.decimal(l_digits: 2),
         description: Faker::Restaurant.description
     )
 end
 
 Restaurant.all.each do |rest|
 
-    5.times do
+    7.times do
         MenuItem.create(
             name: Faker::Food.dish,
             description: Faker::Food.description,
             img:"https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg",
-            price: rand(1..100),
+            price: Faker::Number.decimal(l_digits: 2),
             restaurant: rest
         )
     end
@@ -49,12 +49,9 @@ Cart.create(
     )
 
 
-Cart.all.each do |cart|
-    rest = Restaurant.all.sample
-    items = rand(1..5)
-        items.times do
-            CartItem.create(cart: cart, menu_item: rest.menu_items.sample)
+        3.times do
+            CartItem.create(cart: Cart.first, menu_item: Restaurant.first.menu_items.sample)
         end
-end
+
 
 

@@ -3,10 +3,4 @@ class Cart < ApplicationRecord
   has_many :cart_items
   has_many :menu_items, through: :cart_items
 
-  def totalcost
-    sum = 0
-    self.menu_items.each{|item| sum += item.price.to_f}
-    return sum.to_f
-  end
-
 end
