@@ -5,7 +5,8 @@ MenuItem.destroy_all
 #users
 # sunjet = User.create(username: "SunJet", password: "123", email: "sunjet@sunjet.com")
 # 2.times do
-    User.create(
+
+User.create(
         username: Faker::Internet.username,
         password: "123",
         email: Faker::Internet.email,
@@ -13,7 +14,6 @@ MenuItem.destroy_all
         name: Faker::Name.name,
         phone: Faker::PhoneNumber.phone_number
     )
-# end
 
 3.times do
     Restaurant.create(
@@ -43,7 +43,7 @@ Restaurant.all.each do |rest|
 end
 
 Cart.create(
-        note: "test",
+        note: "tester note",
         checkout: false,
         user: User.all.sample
     )

@@ -2,7 +2,7 @@ class Api::V1::CartsController < ApplicationController
 
     def show
         cart = Cart.find(params[:id])
-        render json: { cart: CartSerializer.new(current_cart) }, status: :accepted
+        render json: { cart: CartSerializer.new(cart) }, status: :accepted
     end
 
     def index
@@ -11,14 +11,19 @@ class Api::V1::CartsController < ApplicationController
         # , except: [:created_at, :updated_at]
     end
 
+    # def create
+    #     @cart = Cart.create(user_params)
+    #     if @cart.valid?
+    #         @token = encode_token(cart_id: @cart.id)
+    #         render json: { cart: CartSerializer.new(@cart), jwt: @token }, status: :created
+    #     else
+    #         render json: { error: 'failed to create cart' }, status: :not_acceptable
+    #     end
+    # end
+
     def create
-        @cart = Cart.create(user_params)
-        if @cart.valid?
-            @token = encode_token(cart_id: @cart.id)
-            render json: { cart: CartSerializer.new(@cart), jwt: @token }, status: :created
-        else
-            render json: { error: 'failed to create cart' }, status: :not_acceptable
-        end
+        cart = Cart.create(cart_params)
+        render json: cart
     end
 
     def destroy
@@ -29,7 +34,7 @@ class Api::V1::CartsController < ApplicationController
 
     def update
         cart = Cart.find(params[:id])
-        cart.update!(user_id: params[:user_id], note: params[:note], checkout: params[:checkout])
+        cart.update(cart_params)
         render json: cart
     end
 
