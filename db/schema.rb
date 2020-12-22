@@ -2,6 +2,15 @@ ActiveRecord::Schema.define(version: 2020_12_11_144638) do
 
   enable_extension "plpgsql"
 
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id"], name: "index_favorites_on_restaurant_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+  
   create_table "cart_items", force: :cascade do |t|
     t.bigint "cart_id", null: false
     t.bigint "menu_item_id", null: false
@@ -20,14 +29,6 @@ ActiveRecord::Schema.define(version: 2020_12_11_144638) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "restaurant_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["restaurant_id"], name: "index_favorites_on_restaurant_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
 
   create_table "menu_items", force: :cascade do |t|
     t.string "name"

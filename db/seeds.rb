@@ -48,7 +48,6 @@ Cart.create(
         user: User.all.sample
     )
 
-
         3.times do
             CartItem.create(cart: Cart.first, menu_item: Restaurant.first.menu_items.sample)
         end
