@@ -30,7 +30,7 @@ end
 
 Restaurant.all.each do |rest|
 
-    7.times do
+    8.times do
         MenuItem.create(
             name: Faker::Food.dish,
             description: Faker::Food.description,
