@@ -2,31 +2,47 @@ User.destroy_all
 Restaurant.destroy_all
 MenuItem.destroy_all
 
-#users
-# sunjet = User.create(username: "SunJet", password: "123", email: "sunjet@sunjet.com")
-# 2.times do
-
 User.create(
-        username: Faker::Internet.username,
+        username: "SunJet",
         password: "123",
-        email: Faker::Internet.email,
+        email: "sunjet@sunjet.com",
         address: Faker::Address.street_address,
         name: Faker::Name.name,
         phone: Faker::PhoneNumber.phone_number
     )
 
-3.times do
+
     Restaurant.create(
-        name: Faker::Restaurant.name,
+        name: "McDonalds",
         rating: rand(1..100),
-        categories: Faker::Restaurant.type,
+        categories: "burger",
         image_url:"https://i1.wp.com/www.eatthis.com/wp-content/uploads/2018/12/the-golden-mcdonalds-arch.jpg?resize=640%2C360&ssl=1",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
         price: Faker::Number.decimal(l_digits: 2),
         description: Faker::Restaurant.description
     )
-end
+
+    Restaurant.create(
+        name: "PizzaHut",
+        rating: rand(1..100),
+        categories: "pizza",
+        image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/Pizza-hut-fast-food-logo.jpg",
+        display_phone: Faker::PhoneNumber.phone_number,
+        location: Faker::Address.street_address,
+        price: Faker::Number.decimal(l_digits: 2),
+        description: Faker::Restaurant.description
+    )
+    Restaurant.create(
+        name: "Taco Bell",
+        rating: rand(1..100),
+        categories: "mexican",
+        image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/Taco-bell-fast-food-logo.jpg",
+        display_phone: Faker::PhoneNumber.phone_number,
+        location: Faker::Address.street_address,
+        price: Faker::Number.decimal(l_digits: 2),
+        description: Faker::Restaurant.description
+    )
 
 Restaurant.all.each do |rest|
 
