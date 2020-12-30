@@ -16,10 +16,10 @@ User.create(
         name: "McDonalds",
         rating: rand(1..100),
         categories: "burger",
-        image_url:"https://i1.wp.com/www.eatthis.com/wp-content/uploads/2018/12/the-golden-mcdonalds-arch.jpg?resize=640%2C360&ssl=1",
+        image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/mcdonalds-fast-food-logo.jpg",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: Faker::Number.decimal(l_digits: 2),
+        price: "$",
         description: Faker::Restaurant.description
     )
 
@@ -30,7 +30,7 @@ User.create(
         image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/Pizza-hut-fast-food-logo.jpg",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: Faker::Number.decimal(l_digits: 2),
+        price: "$$",
         description: Faker::Restaurant.description
     )
     Restaurant.create(
@@ -40,7 +40,7 @@ User.create(
         image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/Taco-bell-fast-food-logo.jpg",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: Faker::Number.decimal(l_digits: 2),
+        price: "$$$",
         description: Faker::Restaurant.description
     )
 
