@@ -74,7 +74,7 @@ MenuItem.create(
     name: "Big Mac",
     description: "Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.",
     img:"https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Big-Mac.jpg?$Product_Desktop$",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 1
 )
 
@@ -82,7 +82,7 @@ MenuItem.create(
     name: "Quarter Pounder with Cheese",
     description: "Each Quarter Pounder® with Cheese burger features a ¼ lb. of 100% fresh beef that’s hot, deliciously juicy and cooked when you order. It’s seasoned with just a pinch of salt and pepper, sizzled on a flat iron grill, then topped with slivered onions, tangy pickles and two slices of melty American cheese on a sesame seed bun. Our QPC® contains no artificial flavors, preservatives or added colors from artificial sources.",
     img:"https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Quarter-Pounder-with-Cheese.jpg?$Product_Desktop$",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 1
 )
 
@@ -90,7 +90,7 @@ MenuItem.create(
     name: "Double Quarter Pounder with Cheese",
     description: "Each Double Quarter Pounder with Cheese features two quarter pound* 100% fresh beef burger patties that are hot, deliciously juicy and cooked when you order. McDonald’s beef patties are seasoned with just a pinch of salt and pepper, sizzled on a flat iron grill, then topped with slivered onions, tangy pickles and two slices of melty cheese on a sesame seed bun. It contains no artificial flavors, preservatives or added colors from artificial sources.",
     img:"https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Double-Quarter-Pounder-with-Cheese.jpg?$Product_Desktop$",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 1
 )
 
@@ -98,7 +98,7 @@ MenuItem.create(
     name: "Double Quarter Pounder with Cheese Deluxe",
     description: "McDonald's Quarter Pounder® with Cheese Deluxe is a fresh take on a Quarter Pounder® classic burger. Crisp leaf lettuce and three Roma tomato slices top a ¼ lb. of 100% McDonald’s fresh beef that’s hot, deliciously juicy and cooked when you order. Seasoned with just a pinch of salt and pepper and sizzled on our flat iron grill. Layered with two slices of melty American cheese, creamy mayo, slivered onions and tangy pickles on a soft, fluffy sesame seed hamburger bun.",
     img:"https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-qpc-deluxe-burger.jpg?$Product_Desktop$",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 1
 )
 
@@ -106,7 +106,7 @@ MenuItem.create(
     name: "McDouble",
     description: "The classic McDouble® burger stacks two 100% pure beef patties seasoned with just a pinch of salt and pepper. Wondering what the difference is between a McDouble® and a Double Cheeseburger? A slice of cheese! It’s topped with tangy pickles, chopped onions, ketchup, mustard and a melty slice of American cheese.",
     img:"https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-McDouble.jpg?$Product_Desktop$",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 1
 )
 
@@ -114,7 +114,7 @@ MenuItem.create(
     name: "Quarter Pounder with Cheese Bacon",
     description: "Each Quarter Pounder® with Cheese Bacon burger features thick-cut applewood smoked bacon atop a ¼ lb. of 100% McDonald's fresh beef that's cooked when you order. It's a hot, deliciously juicy bacon cheeseburger, seasoned with just a pinch of salt and pepper and sizzled on our flat iron grill. Layered with two slices of melty American cheese, slivered onions and tangy pickles on a soft, fluffy sesame seed hamburger bun.",
     img:"https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-qpc-bacon.jpg?$Product_Desktop$",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 1
 )
 
@@ -122,7 +122,7 @@ MenuItem.create(
     name: "Cheese Pizza",
     description: "Your favorite cheese pizza, with your choice of crust covered in classic marinara sauce and topped with gooey mozzarella cheese. It's anything but plain.",
     img:"https://www.pizzahut.com/assets/w/tile/thor/pizza_Cheese.png",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 2
 )
 
@@ -130,7 +130,7 @@ MenuItem.create(
     name: "Pepperoni Pizza",
     description: "You literally can't go wrong with pepperoni and mozzarella cheese. Classic for a reason.",
     img:"https://www.pizzahut.com/assets/w/tile/thor/pizza_Pepperoni.png",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 2
 )
 
@@ -138,7 +138,7 @@ MenuItem.create(
     name: "Meat Lover's Pizza",
     description: "Packed with pepperoni, Italian sausage, ham, bacon, seasoned pork and beef, this pizza is NOT messing around.",
     img:"https://www.pizzahut.com/assets/w/tile/thor/pizza_Meat_Lovers.png",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 2
 )
 
@@ -146,7 +146,7 @@ MenuItem.create(
     name: "Supreme Pizza",
     description: "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and red onions.",
     img:"https://www.pizzahut.com/assets/w/tile/thor/pizza_Supreme.png",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 2
 )
 
@@ -154,7 +154,7 @@ MenuItem.create(
     name: "Veggie Lover's Pizza",
     description: "Pizza is officially a vegetable. This garden delight has all the fresh veggie toppings you love: mushrooms, red onions, green bell peppers, Roma tomatoes and black olives.",
     img:"https://www.pizzahut.com/assets/w/tile/thor/pizza_Veggie_Lovers.png",
-    price: Faker::Number.between(from: 1.00, to: 50.00).round(2),
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
     restaurant_id: 2
 )
 
@@ -253,8 +253,6 @@ MenuItem.create(
     price: "5.49",
     restaurant_id: 4
 )
-
-
 
 Cart.create(
         note: "tester note",
