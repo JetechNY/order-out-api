@@ -208,7 +208,7 @@ MenuItem.create(
 
 MenuItem.create(
     name: "The Original Orange Chicken",
-    description: Faker::Food.description,
+    description: "Our signature dish. Crispy chicken wok-tossed in a sweet and spicy orange sauce.",
     img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_OrangeChicken.jpg",
     price: "5.49",
     restaurant_id: 4
@@ -216,7 +216,7 @@ MenuItem.create(
 
 MenuItem.create(
     name: "Honey Sesame Chicken Breast",
-    description: Faker::Food.description,
+    description: "Honey Sesame Chicken Breast is made with thin, crispy strips of all-white meat chicken tossed with fresh-cut string beans, crisp yellow bell peppers in a sizzling hot wok with our new delicious honey sauce and topped off with sesame seeds.",
     img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_HoneySesame.jpg",
     price: "6.49",
     restaurant_id: 4
@@ -224,7 +224,7 @@ MenuItem.create(
 
 MenuItem.create(
     name: "Black Pepper Angus Steak",
-    description: Faker::Food.description,
+    description: "Angus steak wok-seared with baby broccoli, onions, red bell peppers and mushrooms in a savory black pepper sauce.",
     img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_bpas.jpg",
     price: "7.49",
     restaurant_id: 4
@@ -232,7 +232,7 @@ MenuItem.create(
 
 MenuItem.create(
     name: "Broccoli Beef",
-    description: Faker::Food.description,
+    description: "A classic favorite. Tender beef and fresh broccoli in a ginger soy sauce.",
     img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_BroccoliBeef.jpg",
     price: "6.49",
     restaurant_id: 4
@@ -240,7 +240,7 @@ MenuItem.create(
 
 MenuItem.create(
     name: "Honey Walnut Shrimp",
-    description: Faker::Food.description,
+    description: "Large tempura-battered shrimp, wok-tossed in a honey sauce and topped with glazed walnuts.",
     img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_HoneyWalnutShrimp.jpg",
     price: "7.49",
     restaurant_id: 4
@@ -248,7 +248,7 @@ MenuItem.create(
 
 MenuItem.create(
     name: "Kung Pao Chicken",
-    description: Faker::Food.description,
+    description: "A Szechwan-inspired dish with chicken, peanuts and vegetables, finished with chili peppers.",
     img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_KungPaoChicken.jpg",
     price: "5.49",
     restaurant_id: 4

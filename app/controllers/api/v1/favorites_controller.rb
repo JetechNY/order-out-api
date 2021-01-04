@@ -1,6 +1,6 @@
 class Api::V1::FavoritesController < ApplicationController
 
-skip_before_action :authorized, only: [:create, :destroy]
+# skip_before_action :authorized, only: [:create, :destroy]
 
     def create
         favorite = Favorite.create(favorite_params)
@@ -20,7 +20,7 @@ skip_before_action :authorized, only: [:create, :destroy]
     private
 
     def favorite_params
-        params.permit(:user_id, :haiku_id)
+        params.permit(:user_id, :restaurant_id)
     end
 
 end
