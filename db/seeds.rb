@@ -19,7 +19,7 @@ User.create(
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
         price: "$",
-        description: Faker::Restaurant.description
+        description: "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States. They rechristened their business as a hamburger stand, and later turned the company into a franchise, with the Golden Arches logo being introduced in 1953 at a location in Phoenix, Arizona. In 1955, Ray Kroc, a businessman, joined the company as a franchise agent and proceeded to purchase the chain from the McDonald brothers. McDonald's had its previous headquarters in Oak Brook, Illinois, but moved its global headquarters to Chicago in June 2018."
     )
 
     Restaurant.create(
@@ -30,7 +30,7 @@ User.create(
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
         price: "$$",
-        description: Faker::Restaurant.description
+        description: "Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides Italian-American cuisine, including pizza, pasta, side dishes and desserts. It has 18,703 restaurants worldwide as of December 31, 2019,[2] making it the world's largest pizza chain in terms of number of locations. It is a subsidiary of Yum! Brands, Inc., one of the world's largest restaurant companies."
     )
     Restaurant.create(
         name: "Taco Bell",
@@ -40,7 +40,7 @@ User.create(
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
         price: "$$$",
-        description: Faker::Restaurant.description
+        description: "Taco Bell is an American-based chain of fast food restaurants originating in Irvine, California in 1962, by founder Glen Bell. Taco Bell is a subsidiary of Yum! Brands, Inc. The restaurants serve a variety of Mexican-inspired foods, that include: tacos, burritos, quesadillas, nachos, novelty and specialty items, along with a variety of value menu items. As of 2018, Taco Bell serves over two billion customers each year, at 7,072 restaurants, more than 93 percent of which are owned and operated by independent franchisees and licensees."
     )
 
 # Restaurant.all.each do |rest|
