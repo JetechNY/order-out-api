@@ -159,6 +159,14 @@ MenuItem.create(
 )
 
 MenuItem.create(
+    name: "Supremo P’ZONE",
+    description: "Italian Sausage, Green Pepper, Red Onion and melty cheese folded inside a pizza crust, finished with toasted parmesan and baked calzone style. Served with marinara for dipping.",
+    img:"https://www.pizzahut.com/assets/w/tile/thor/pzone_supremo_producttile_175x203.png",
+    price: Faker::Number.between(from: 1.00, to: 15.00).round(2),
+    restaurant_id: 2
+)
+
+MenuItem.create(
     name: "Loaded Nacho Taco",
     description: Faker::Food.description,
     img:"https://www.tacobell.com/images/24537_loaded_nacho_taco_269x269.jpg",
