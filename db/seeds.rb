@@ -13,19 +13,19 @@ User.create(
 
     Restaurant.create(
         name: "McDonalds",
-        rating: rand(1..100),
-        categories: "burger",
+        rating: rand(15..100),
+        categories: "Fast Food Burgers",
         image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/mcdonalds-fast-food-logo.jpg",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: "$",
+        price: "$$",
         description: "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States. They rechristened their business as a hamburger stand, and later turned the company into a franchise, with the Golden Arches logo being introduced in 1953 at a location in Phoenix, Arizona. In 1955, Ray Kroc, a businessman, joined the company as a franchise agent and proceeded to purchase the chain from the McDonald brothers. McDonald's had its previous headquarters in Oak Brook, Illinois, but moved its global headquarters to Chicago in June 2018."
     )
 
     Restaurant.create(
         name: "PizzaHut",
-        rating: rand(1..100),
-        categories: "pizza",
+        rating: rand(15..100),
+        categories: "Italian-American",
         image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/Pizza-hut-fast-food-logo.jpg",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
@@ -34,14 +34,27 @@ User.create(
     )
     Restaurant.create(
         name: "Taco Bell",
-        rating: rand(1..100),
-        categories: "mexican",
+        rating: rand(15..100),
+        categories: "Mexican Inspired",
         image_url:"http://www.logopeople.com.au/blog/wp-content/uploads/2013/09/Taco-bell-fast-food-logo.jpg",
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
-        price: "$$$",
+        price: "$",
         description: "Taco Bell is an American-based chain of fast food restaurants originating in Irvine, California in 1962, by founder Glen Bell. Taco Bell is a subsidiary of Yum! Brands, Inc. The restaurants serve a variety of Mexican-inspired foods, that include: tacos, burritos, quesadillas, nachos, novelty and specialty items, along with a variety of value menu items. As of 2018, Taco Bell serves over two billion customers each year, at 7,072 restaurants, more than 93 percent of which are owned and operated by independent franchisees and licensees."
     )
+
+    Restaurant.create(
+        name: "Panda Express",
+        rating: rand(15..100),
+        categories: "American Chinese Inspired",
+        image_url:"https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-original-577x577/s3/012016/untitled-1_333.png?itok=JyXaK8kF",
+        display_phone: Faker::PhoneNumber.phone_number,
+        location: Faker::Address.street_address,
+        price: "$",
+        description: "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States, where it was founded and is mainly located (in addition to other countries and territories in North America and Asia). Panda Express restaurants were traditionally located in shopping mall food courts, but the chain now operates units in many other environments and formats, including stand-alone restaurants, as well as universities, casinos, airports, military bases, amusement parks and other venues."
+    )
+
+
 
 # Restaurant.all.each do |rest|
 
@@ -192,6 +205,55 @@ MenuItem.create(
     price: "3.49",
     restaurant_id: 3
 )
+
+MenuItem.create(
+    name: "The Original Orange Chicken",
+    description: Faker::Food.description,
+    img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_OrangeChicken.jpg",
+    price: "5.49",
+    restaurant_id: 4
+)
+
+MenuItem.create(
+    name: "Honey Sesame Chicken Breast",
+    description: Faker::Food.description,
+    img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_HoneySesame.jpg",
+    price: "6.49",
+    restaurant_id: 4
+)
+
+MenuItem.create(
+    name: "Black Pepper Angus Steak",
+    description: Faker::Food.description,
+    img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_bpas.jpg",
+    price: "7.49",
+    restaurant_id: 4
+)
+
+MenuItem.create(
+    name: "Broccoli Beef",
+    description: Faker::Food.description,
+    img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_BroccoliBeef.jpg",
+    price: "6.49",
+    restaurant_id: 4
+)
+
+MenuItem.create(
+    name: "Honey Walnut Shrimp",
+    description: Faker::Food.description,
+    img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_HoneyWalnutShrimp.jpg",
+    price: "7.49",
+    restaurant_id: 4
+)
+
+MenuItem.create(
+    name: "Kung Pao Chicken",
+    description: Faker::Food.description,
+    img:"https://s3.amazonaws.com/PandaExpressWebsite/Responsive/img/food/thumbnails/grid_KungPaoChicken.jpg",
+    price: "5.49",
+    restaurant_id: 4
+)
+
 
 
 Cart.create(
