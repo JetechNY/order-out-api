@@ -269,7 +269,7 @@ Cart.create(
     )
 
         3.times do
-            CartItem.create(cart: Cart.first, menu_item: Restaurant.first.menu_items.sample)
+            CartItem.create(cart: Cart.first, menu_item: Restaurant.second.menu_items.sample)
         end
 
 
