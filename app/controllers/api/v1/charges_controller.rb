@@ -1,13 +1,18 @@
+require 'stripe'
+require 'dotenv'
+Dotenv.load('./.env')
+
 class Api::V1::ChargesController < ApplicationController
+
+  Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
   def create
 
-    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-
     order = Order.find(params[:orderId])
-    amount = order.shoes.sum(:cost) * 100
+    amount = order.menuitems.sum(:cost) * 100
 
     charge = Stripe::Charge.create(
+      :customer => customer.id
       :amount => amount,
       :description => 'Order Out Store',
       :currency => 'usd',
