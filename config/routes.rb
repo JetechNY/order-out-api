@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       resources :carts
       resources :restaurants
       resources :users
+
+      post "charges", to: "charges#create"
+      
     end
   end
 end

@@ -30,7 +30,7 @@ User.create(
         display_phone: Faker::PhoneNumber.phone_number,
         location: Faker::Address.street_address,
         price: "$$",
-        description: "Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides Italian-American cuisine, including pizza, pasta, side dishes and desserts. It has 18,703 restaurants worldwide as of December 31, 2019,[2] making it the world's largest pizza chain in terms of number of locations. It is a subsidiary of Yum! Brands, Inc., one of the world's largest restaurant companies."
+        description: "Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides Italian-American cuisine, including pizza, pasta, side dishes and desserts. It has 18,703 restaurants worldwide as of December 31, 2019, making it the world's largest pizza chain in terms of number of locations. It is a subsidiary of Yum! Brands, Inc., one of the world's largest restaurant companies."
     )
     Restaurant.create(
         name: "Taco Bell",
