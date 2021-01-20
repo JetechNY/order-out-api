@@ -1,14 +1,15 @@
+Cart.destroy_all
 User.destroy_all
 Restaurant.destroy_all
 MenuItem.destroy_all
 
-User.create(
+    User.create(
         username: "SunJet",
         password: "123",
         email: "sunjet@sunjet.com",
         address: Faker::Address.street_address,
         name: Faker::Name.name,
-        phone: Faker::PhoneNumber.phone_number
+        phone: Faker::PhoneNumber.phone_number,
     )
 
     Restaurant.create(
@@ -263,7 +264,7 @@ MenuItem.create(
 )
 
 Cart.create(
-        note: "tester note",
+        note: "test cart",
         checkout: false,
         user: User.all.sample
     )
