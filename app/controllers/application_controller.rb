@@ -1,7 +1,8 @@
-class ApplicationController < ActionController::API
-    # before_action :authorized
-    protect_from_forgery with: :exception
+class ApplicationController < ActionController::Base
+# class ApplicationController < ActionController::API
 
+  # before_action :authorized
+    protect_from_forgery with: :exception
 
     def encode_token(payload)
       # should store secret in env variable
@@ -37,5 +38,6 @@ class ApplicationController < ActionController::API
     def authorized
       render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
     end
+
 
 end
